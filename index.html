@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAFARIEL | Web3 Strategist & Creative Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* ===== NAVBAR ===== */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(20px);
+z-index:1000;
+}
+
+.logo{
+font-weight:800;
+letter-spacing:3px;
+font-size:20px;
+}
+
+nav a{
+color:#aaa;
+text-decoration:none;
+margin-left:30px;
+transition:0.3s;
+font-weight:500;
+}
+
+nav a:hover{
+color:#fff;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+url('hero.jpg') center/cover no-repeat;
+animation:zoomEffect 20s infinite alternate ease-in-out;
+z-index:-1;
+}
+
+@keyframes zoomEffect{
+0%{transform:scale(1);}
+100%{transform:scale(1.1);}
+}
+
+.hero h1{
+font-size:70px;
+letter-spacing:6px;
+font-weight:800;
+}
+
+.hero p{
+margin-top:20px;
+color:#bbb;
+font-size:18px;
+}
+
+.btn{
+display:inline-block;
+margin-top:40px;
+padding:14px 35px;
+border:1px solid #fff;
+text-decoration:none;
+color:#fff;
+transition:0.4s;
+}
+
+.btn:hover{
+background:#fff;
+color:#000;
+}
+
+/* ===== SECTION ===== */
+
+section{
+padding:120px 10%;
+position:relative;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+margin-bottom:60px;
+font-weight:700;
+}
+
+.glass{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.1);
+padding:40px;
+transition:0.4s;
+}
+
+.glass:hover{
+transform:translateY(-8px);
+border:1px solid rgba(255,255,255,0.3);
+}
+
+/* ===== GRID ===== */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+}
+
+/* ===== ANIMATION ON SCROLL ===== */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+padding:60px;
+text-align:center;
+border-top:1px solid #222;
+color:#666;
+}
+
+.social a{
+margin:0 15px;
+text-decoration:none;
+color:#fff;
+font-weight:600;
+transition:0.3s;
+}
+
+.social a:hover{
+opacity:0.7;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">DAFARIEL</div>
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#tutorial">Guide</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>DAFARIEL</h1>
+<p>Web3 Enthusiast • Crypto Strategist • Community Builder</p>
+<a href="#contact" class="btn">Start a Project</a>
+</div>
+</section>
+
+<section id="about">
+<h2 class="section-title reveal">About</h2>
+<div class="glass reveal">
+<p style="color:#bbb;line-height:1.8;">
+DAFARIEL is a Web3 strategist and creative digital studio operating since 2019, specializing in blockchain partnerships, decentralized community growth, and strategic project development. We empower Web3 ecosystems through high-level collaborations, premium branding, and growth-focused execution across DeFi, NFTs, DAOs, and crypto startups.
+</p>
+</div>
+</section>
+
+<section id="services">
+<h2 class="section-title reveal">Services</h2>
+<div class="grid">
+
+<div class="glass reveal">
+<h3>Professional Logo Design</h3>
+<p style="color:#aaa;">High-end identity systems tailored for crypto and Web3 brands.</p>
+</div>
+
+<div class="glass reveal">
+<h3>Promotional Videos</h3>
+<p style="color:#aaa;">Cinematic teasers, explainers, and launch campaigns.</p>
+</div>
+
+<div class="glass reveal">
+<h3>Meme Campaign Design</h3>
+<p style="color:#aaa;">Viral meme strategies for airdrop and community growth.</p>
+</div>
+
+<div class="glass reveal">
+<h3>Graphic Design System</h3>
+<p style="color:#aaa;">Full visual kits for Web3 startups.</p>
+</div>
+
+<div class="glass reveal">
+<h3>Airdrop Content Kit</h3>
+<p style="color:#aaa;">Complete design assets for successful campaigns.</p>
+</div>
+
+</div>
+</section>
+
+<section id="portfolio">
+<h2 class="section-title reveal">Portfolio</h2>
+<div class="glass reveal">
+<p style="color:#bbb;">
+Worked with blockchain startups, DeFi platforms, NFT ecosystems, and DAO communities to scale brand awareness and engagement globally.
+</p>
+</div>
+</section>
+
+<section id="tutorial">
+<h2 class="section-title reveal">Free Web3 Launch Guide</h2>
+<div class="glass reveal">
+<p style="color:#aaa;line-height:1.8;">
+1. Define your token utility and roadmap clearly.<br><br>
+2. Build community before product hype.<br><br>
+3. Secure strategic partnerships aligned with your niche.<br><br>
+4. Create premium branding and storytelling.<br><br>
+5. Execute structured marketing campaigns with measurable growth KPIs.
+</p>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title reveal">Contact</h2>
+<div class="glass reveal" style="text-align:center;">
+<p>Email: dafarielreal@gmail.com</p>
+<div class="social" style="margin-top:20px;">
+<a href="https://x.com/0xDafariel" target="_blank">Twitter</a>
+<a href="https://t.me/DaafarieL" target="_blank">Telegram</a>
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 DAFARIEL — Premium Web3 Studio
+</footer>
+
+<script>
+
+window.addEventListener('scroll', function(){
+var reveals = document.querySelectorAll('.reveal');
+for(var i=0; i<reveals.length; i++){
+var windowHeight = window.innerHeight;
+var elementTop = reveals[i].getBoundingClientRect().top;
+var elementVisible = 100;
+if(elementTop < windowHeight - elementVisible){
+reveals[i].classList.add('active');
+}
+}
+});
+
+</script>
+
+</body>
+</html>
