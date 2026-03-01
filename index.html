@@ -5,107 +5,184 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DAFARIEL | Web3 Strategist & Creative Studio</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-body{
-background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
-url('background.jpg') center/cover no-repeat fixed;
-color:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-min-height:100vh;
-text-align:center;
-padding:40px;
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('background.jpg') center/cover no-repeat fixed;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 40px;
+    overflow: hidden;
+    font-size: 16px;
 }
 
-.container{
-max-width:900px;
+.container {
+    max-width: 900px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
-h1{
-font-size:48px;
-font-weight:900;
-letter-spacing:4px;
-margin-bottom:20px;
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
-p{
-color:#aaa;
-line-height:1.7;
-font-size:18px;
-margin-bottom:30px;
+h1 {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    animation: slideUp 1.5s ease-in-out;
 }
 
-.offers{
-margin:40px 0;
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-.offers h2{
-font-size:22px;
-margin-bottom:20px;
-font-weight:700;
-letter-spacing:2px;
+p {
+    color: #aaa;
+    line-height: 1.7;
+    font-size: 18px;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.offers ul{
-list-style:none;
-color:#ccc;
-line-height:1.8;
+.offers {
+    margin: 40px 0;
+    animation: fadeIn 2.5s ease-in-out;
 }
 
-.contact a{
-display:inline-block;
-margin:10px 15px;
-color:#fff;
-text-decoration:none;
-border:1px solid #fff;
-padding:10px 20px;
-transition:0.3s;
+.offers h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.contact a:hover{
-background:#fff;
-color:#000;
+.offers ul {
+    list-style: none;
+    color: #ccc;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.contact a {
+    display: inline-block;
+    margin: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-size: 18px;
+    transform: translateY(10px);
+    animation: contactLinkFadeIn 3s ease-in-out;
+}
+
+@keyframes contactLinkFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact a:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.social-icons {
+    margin-top: 20px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ff6600;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+    color: #aaa;
+    animation: fadeIn 4s ease-in-out;
 }
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
-<h1>DAFARIEL</h1>
+    <h1>DAFARIEL</h1>
 
-<p>
-DAFARIEL is a Web3 strategist and creative digital studio specializing in crypto partnerships, community growth, and blockchain ecosystem development since 2019.  
-Focused on DeFi, NFTs, DAOs, and emerging Web3 projects, DAFARIEL helps brands scale with clarity, strategy, and premium execution.
-</p>
+    <p>
+        DAFARIEL is a leading Web3 strategist and creative digital studio that has been pushing the boundaries of blockchain and crypto since 2019. With a focus on DeFi, NFTs, DAOs, and emerging Web3 projects, DAFARIEL provides brands with cutting-edge strategies, creative execution, and a deep understanding of the decentralized ecosystem. We help elevate your brand's presence in the digital future with clarity, innovation, and expertise.
+    </p>
 
-<div class="offers">
-<h2>What We Offer</h2>
-<ul>
-<li>• Web3 Strategy & Blockchain Consulting</li>
-<li>• Crypto Partnerships & Ecosystem Growth</li>
-<li>• Community Building & Engagement</li>
-<li>• Professional Logo & Visual Branding</li>
-<li>• Promotional Videos & Creative Content</li>
-<li>• Meme Campaign & Airdrop Design Assets</li>
-</ul>
-</div>
+    <div class="offers">
+        <h2>What We Offer</h2>
+        <ul>
+            <li>• Web3 Strategy & Blockchain Consulting</li>
+            <li>• Crypto Partnerships & Ecosystem Growth</li>
+            <li>• Community Building & Engagement</li>
+            <li>• Professional Logo & Visual Branding</li>
+            <li>• Promotional Videos & Creative Content</li>
+            <li>• Meme Campaign & Airdrop Design Assets</li>
+        </ul>
+    </div>
 
-<div class="contact">
-<a href="mailto:dafarielreal@gmail.com">Email</a>
-<a href="https://x.com/0xDafariel" target="_blank">Twitter</a>
-<a href="https://t.me/DaafarieL" target="_blank">Telegram</a>
-</div>
+    <div class="contact">
+        <a href="mailto:dafarielreal@gmail.com">Email</a>
+        <a href="https://x.com/0xDafariel" target="_blank">Twitter</a>
+        <a href="https://t.me/DaafarieL" target="_blank">Telegram</a>
+    </div>
 
+    <div class="social-icons">
+        <a href="https://linkedin.com/in/dafariel" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/dafariel" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+
+    <footer>
+        <p>DAFARIEL &copy; 2026 | All rights reserved</p>
+    </footer>
 </div>
 
 </body>
