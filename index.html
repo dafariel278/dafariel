@@ -3,187 +3,259 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DAFARIEL | Web3 Strategist & Creative Studio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<title>DAFARIEL | Luxury Web3 Strategy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+scroll-behavior:smooth;
 }
 
-body {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('background.jpg') center/cover no-repeat fixed;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
-    padding: 40px;
-    overflow: hidden;
-    font-size: 16px;
+body{
+background:
+linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+url('background.jpg') center/cover no-repeat fixed;
+color:#fff;
+overflow-x:hidden;
 }
 
-.container {
-    max-width: 900px;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
+/* Animated Gradient Overlay */
+body::before{
+content:'';
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(120deg, #0f0f0f, #1a1a1a, #111);
+background-size:300% 300%;
+animation:gradientMove 12s ease infinite;
+opacity:0.6;
+z-index:-1;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
-h1 {
-    font-size: 48px;
-    font-weight: 900;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    animation: slideUp 1.5s ease-in-out;
+/* Hero Section */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px;
 }
 
-@keyframes slideUp {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.glass{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:20px;
+padding:60px 50px;
+max-width:900px;
+animation:fadeUp 1.5s ease forwards;
+opacity:0;
 }
 
-p {
-    color: #aaa;
-    line-height: 1.7;
-    font-size: 18px;
-    margin-bottom: 30px;
-    animation: fadeIn 2s ease-in-out;
+@keyframes fadeUp{
+0%{transform:translateY(40px);opacity:0;}
+100%{transform:translateY(0);opacity:1;}
 }
 
-.offers {
-    margin: 40px 0;
-    animation: fadeIn 2.5s ease-in-out;
+h1{
+font-size:60px;
+font-weight:900;
+letter-spacing:6px;
+margin-bottom:20px;
 }
 
-.offers h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.hero p{
+color:#ccc;
+font-size:20px;
+line-height:1.7;
+margin-bottom:40px;
 }
 
-.offers ul {
-    list-style: none;
-    color: #ccc;
-    line-height: 1.8;
-    font-size: 18px;
+.tagline{
+font-weight:600;
+letter-spacing:2px;
+margin-bottom:20px;
+color:#aaa;
 }
 
-.contact a {
-    display: inline-block;
-    margin: 10px 15px;
-    color: #fff;
-    text-decoration: none;
-    border: 1px solid #fff;
-    padding: 10px 20px;
-    transition: 0.3s;
-    border-radius: 5px;
-    font-size: 18px;
-    transform: translateY(10px);
-    animation: contactLinkFadeIn 3s ease-in-out;
+/* Section Styling */
+section{
+padding:120px 10%;
+text-align:center;
 }
 
-@keyframes contactLinkFadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.section-title{
+font-size:38px;
+font-weight:800;
+margin-bottom:60px;
+letter-spacing:3px;
 }
 
-.contact a:hover {
-    background: #fff;
-    color: #000;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
-.social-icons {
-    margin-top: 20px;
-    animation: fadeIn 3s ease-in-out;
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:18px;
+padding:40px 25px;
+transition:0.4s ease;
 }
 
-.social-icons a {
-    color: #fff;
-    font-size: 20px;
-    margin: 0 15px;
-    text-decoration: none;
+.card:hover{
+transform:translateY(-10px);
+background:rgba(255,255,255,0.08);
 }
 
-.social-icons a:hover {
-    color: #ff6600;
-    transform: scale(1.2);
-    transition: 0.3s;
+.card h3{
+margin-bottom:15px;
+font-size:20px;
+font-weight:700;
 }
 
-footer {
-    position: absolute;
-    bottom: 20px;
-    font-size: 14px;
-    color: #aaa;
-    animation: fadeIn 4s ease-in-out;
+.card p{
+color:#bbb;
+font-size:15px;
+line-height:1.6;
 }
+
+/* Contact Section */
+.contact{
+padding:120px 10%;
+text-align:center;
+}
+
+.contact-buttons{
+margin-top:40px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.contact-buttons a{
+text-decoration:none;
+color:#fff;
+padding:14px 35px;
+border-radius:50px;
+border:1px solid rgba(255,255,255,0.3);
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+transition:0.3s ease;
+}
+
+.contact-buttons a:hover{
+background:#fff;
+color:#000;
+transform:translateY(-5px);
+}
+
+/* Footer */
+footer{
+padding:40px;
+text-align:center;
+color:#777;
+font-size:14px;
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
+/* Scroll Reveal */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
-    <h1>DAFARIEL</h1>
-
-    <p>
-        DAFARIEL is a leading Web3 strategist and creative digital studio that has been pushing the boundaries of blockchain and crypto since 2019. With a focus on DeFi, NFTs, DAOs, and emerging Web3 projects, DAFARIEL provides brands with cutting-edge strategies, creative execution, and a deep understanding of the decentralized ecosystem. We help elevate your brand's presence in the digital future with clarity, innovation, and expertise.
-    </p>
-
-    <div class="offers">
-        <h2>What We Offer</h2>
-        <ul>
-            <li>• Web3 Strategy & Blockchain Consulting</li>
-            <li>• Crypto Partnerships & Ecosystem Growth</li>
-            <li>• Community Building & Engagement</li>
-            <li>• Professional Logo & Visual Branding</li>
-            <li>• Promotional Videos & Creative Content</li>
-            <li>• Meme Campaign & Airdrop Design Assets</li>
-        </ul>
-    </div>
-
-    <div class="contact">
-        <a href="mailto:dafarielreal@gmail.com">Email</a>
-        <a href="https://x.com/0xDafariel" target="_blank">Twitter</a>
-        <a href="https://t.me/DaafarieL" target="_blank">Telegram</a>
-    </div>
-
-    <div class="social-icons">
-        <a href="https://linkedin.com/in/dafariel" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/dafariel" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-    </div>
-
-    <footer>
-        <p>DAFARIEL &copy; 2026 | All rights reserved</p>
-    </footer>
+<div class="hero">
+<div class="glass">
+<div class="tagline">Architecting Authority in Web3</div>
+<h1>DAFARIEL</h1>
+<p>
+Luxury Web3 strategist & ecosystem architect.  
+Building positioning, authority, and sustainable growth  
+for decentralized brands since 2019.
+</p>
 </div>
+</div>
+
+<section>
+<div class="section-title reveal">Core Expertise</div>
+<div class="card-grid">
+<div class="card reveal">
+<h3>Strategic Architecture</h3>
+<p>Positioning, token framework, and long-term ecosystem design for serious Web3 founders.</p>
+</div>
+<div class="card reveal">
+<h3>Crypto Partnerships</h3>
+<p>High-value collaborations and network alignment to expand authority and reach.</p>
+</div>
+<div class="card reveal">
+<h3>Elite Community Growth</h3>
+<p>Structured engagement systems that convert audience into loyal ecosystem members.</p>
+</div>
+<div class="card reveal">
+<h3>Luxury Branding</h3>
+<p>Premium visual identity and narrative strategy built for high-tier decentralized brands.</p>
+</div>
+</div>
+</section>
+
+<section class="contact">
+<div class="section-title reveal">Private Consultation</div>
+<p class="reveal">Limited availability. By serious inquiry only.</p>
+
+<div class="contact-buttons reveal">
+<a href="mailto:dafarielreal@gmail.com">Email</a>
+<a href="https://x.com/0xDafariel" target="_blank">Twitter (X)</a>
+<a href="https://t.me/DaafarieL" target="_blank">Telegram</a>
+</div>
+</section>
+
+<footer>
+© 2026 DAFARIEL — Web3 Strategy & Ecosystem Development
+</footer>
+
+<script>
+window.addEventListener('scroll', function(){
+var reveals = document.querySelectorAll('.reveal');
+for(var i=0;i<reveals.length;i++){
+var windowHeight = window.innerHeight;
+var elementTop = reveals[i].getBoundingClientRect().top;
+var elementVisible = 100;
+if(elementTop < windowHeight - elementVisible){
+reveals[i].classList.add('active');
+}
+}
+});
+</script>
 
 </body>
 </html>
